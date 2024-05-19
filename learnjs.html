@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS</title>
+</head>
+
+<body>
+  <div id="gallery">
+    <h1>Cat and rabbit</h1>
+    <div>
+      <button id="prevButton">Previos</button>
+      <button id="nextButton">Next</button>
+    </div>
+    <img src="./cat.jpg" id="galleryImage" alt="cat">
+  </div>
+  <script>
+    //вывод в консоль задания 2
+    const learn = () => {
+      console.log(`Я учу JavaScript`);
+    };
+    learn();
+    // переменные для хранения путей к изображениям
+    const image1 = "./cat.jpg";
+    const image2 = "./rabbit.jpg";
+    // получаем элементы ДОМ дерева
+    const galleryImage = document.getElementById("galleryImage");
+    const prevButton = document.getElementById("prevButton");
+    const nextButton = document.getElementById("nextButton");
+    // объвляем текущую картинку
+    let currentImage = image2;
+    //Функция изменения картинки
+    function changeImage(image) {
+      galleryImage.src = image;
+    }
+    //Функция нажатия на кнопку Next
+    nextButton.addEventListener("click", () => {
+      currentImage = image2;
+      changeImage(currentImage);
+    });
+    //Функция нажатия на кнопку Previos
+    prevButton.addEventListener("click", () => {
+      currentImage = image1;
+      changeImage(currentImage);
+    });
+  </script>
+</body>
+
+</html>
