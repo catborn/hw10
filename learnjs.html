@@ -13,6 +13,7 @@
     <div>
       <button id="prevButton">Previos</button>
       <button id="nextButton">Next</button>
+      <button id="galleryCost">Узнать стоимость</button>
     </div>
     <img src="./cat.jpg" id="galleryImage" alt="cat">
   </div>
@@ -44,6 +45,19 @@
     prevButton.addEventListener("click", () => {
       currentImage = image1;
       changeImage(currentImage);
+    });
+    //задание со звёздочкой
+    const galleryCost = document.getElementById("galleryCost");
+    function calculateTotalPrice() {
+      quantity = Number(2);
+      price = Number(15000000);
+      result = quantity * price;
+      resultRu = result.toLocaleString("ru-RU");
+      console.log(resultRu);
+    }
+    calculateTotalPrice()
+    galleryCost.addEventListener("click", () => {
+      calculateTotalPrice(alert(`Суммарная стоимость красоты: ${resultRu} рублей`));
     });
   </script>
 </body>
