@@ -18,6 +18,14 @@
     <img src="./cat.jpg" id="galleryImage" alt="cat">
   </div>
   <script>
+    //фидбек! В задании с кнопками и двумя картинками всё отлично! Только не вижу смысла в переменной currentImage, можно же просто передавать конкретную картинку
+    // nextButton.addEventListener("click", () => {
+    //   changeImage(image2);
+    // });
+    // prevButton.addEventListener("click", () => {
+    //   changeImage(image1);
+    // });
+    // конец фидбека
     //вывод в консоль задания 2
     const learn = () => {
       console.log(`Я учу JavaScript`);
@@ -40,11 +48,13 @@
     nextButton.addEventListener("click", () => {
       currentImage = image2;
       changeImage(currentImage);
+      //   changeImage(image2);
     });
     //Функция нажатия на кнопку Previos
     prevButton.addEventListener("click", () => {
       currentImage = image1;
       changeImage(currentImage);
+      //   changeImage(image1);
     });
     //задание со звёздочкой
     const galleryCost = document.getElementById("galleryCost");
